@@ -1,0 +1,653 @@
+@keyframes foto{
+  0%{ transform: translate(0%,-4%);}
+
+  50%{
+    transform: translate(4%, -2%);
+  }
+
+  80%{
+
+    transform: translate(-4%, -2%);
+  }
+
+  100%{
+    transform: translate(0%,-4%);
+  }
+}
+
+@keyframes entrada{
+
+  0%{
+     transform: translateX(-100%);
+     opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+}
+
+@keyframes entrada2{
+
+  0%{
+     transform: translateX(100%);
+     opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+}
+
+@keyframes surgir{
+
+  0%{
+     opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+
+}
+
+@keyframes pracima{
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(-115%);
+  }
+}
+
+@keyframes prabaixo{
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(115%);
+  }
+}
+
+@keyframes telainit{
+
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+
+  }
+}
+
+
+.App {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+
+  .player{
+    width: 100%;
+    max-width: 400px;
+    .controles{
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .verso{
+    font-style: italic;
+    margin: 10px 10px 0px 10px;
+    text-align: center;
+    z-index: 5;
+  
+  }
+
+  .noivos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15%);
+  
+
+    .brasao{
+      color: #e2aca3;
+      font-size: 70px;
+      display: flex;
+      align-items: center;
+      animation: surgir 3.5s ease;
+      .simbol{
+        font-size: 50px;
+        transform: translateY(-3px);
+        margin: 0 3px;
+      }
+      .j{
+        transform: translateY(2px);
+      }
+      
+
+    }
+
+
+    .nomes{
+
+      display: flex;
+      align-items: center;
+      .nome1{
+
+        animation: entrada 2s ease;
+        .talita{
+          font-family: 'Alex Brush';
+          font-size: 50px;
+          color: #e2aca3;
+          
+        }
+      }
+
+      .nome2{
+        animation: entrada2 2s ease;
+
+        .jonathan{
+          font-family: 'Alex Brush';
+          font-size: 50px;
+          color: #e2aca3;
+      
+      
+        }
+      }
+        
+        .icon{
+          animation: surgir 3s ease;
+          color: rgb(214, 7, 7);
+          margin: 0 4px;
+          text-align: center;
+        }
+    }
+  
+     
+  }
+
+  .convite{
+    text-align: center;
+    max-width: 90%;
+    font-size: 1.1rem;
+
+  }
+
+  .date{
+
+    background-color: #e2aca3;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    animation: surgir 4s ease;
+    span{
+      font-size: 1.5rem;
+
+    }
+
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 5px;
+    max-width: 420px;
+
+    a{
+      text-decoration: none;
+      color: inherit;
+
+      width: 100%;
+      .local{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        background-color: #ffebcd98;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 7px;
+        
+        &:hover{
+          background-color: #e2aca3 ;
+  
+          .icon{
+            color:#ffffff;
+          }
+        }
+    
+    
+        span{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 20%;
+        }
+        .icon{
+          color:#e2aca3;
+          font-size: 3rem;
+          margin: 0px 30px 0px 15px;
+    
+        }
+    
+        .nome{
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .btn-presenca{
+      background-color: #ffebcd98;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      margin-bottom: 7px;
+      text-align: center;
+
+      &:hover{
+        background-color: #e2aca3 ;
+
+        .icon{
+          color:#ffffff;
+        }
+      }
+  
+  
+      span{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20%;
+      }
+      .icon{
+        color:#e2aca3;
+        font-size: 3rem;
+        margin: 0px 30px 0px 15px;
+  
+      }
+  
+      .nome{
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .imagem{
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    overflow: hidden;
+    transform: translateY(-5%);
+    animation: foto 30s ease alternate infinite ;
+    img{
+      width: 100%;
+    }
+
+  }
+  .tela-init{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    width: 100%;
+    opacity: 1;
+    
+  
+    .cima{
+      position: relative;
+      background-color: #f7aea2;
+      height: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items:center ;
+      box-shadow: #82564e 0px 15px 15px;
+  
+  
+      .btn{
+        width: 90px;
+        height: 90px;
+        border-radius: 45px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing:border-box;
+        box-shadow: rgba(0, 0, 0, 0.556) 0px 10px 10px ;
+        margin: auto;
+        font-family: 'Alex Brush';
+        font-size: 2rem;
+        font-weight:bolder ;
+        position: absolute;
+        bottom: -45px;
+        
+        
+      }
+      .noivos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30%;
+    
+        .brasao{
+          color: rgb(0, 0, 0);
+          font-size: 70px;
+          display: flex;
+          align-items: center;
+          animation: surgir 3.5s ease;
+          .simbol{
+            font-size: 50px;
+            transform: translateY(-3px);
+            margin: 0 3px;
+          }
+          .j{
+            transform: translateY(2px);
+          }
+          
+    
+        }
+    
+    
+        .nomes{
+    
+          display: flex;
+          align-items: center;
+          .nome1{
+    
+            animation: entrada 2s ease;
+            .talita{
+              font-family: 'Alex Brush';
+              font-size: 50px;
+              color: rgb(0, 0, 0);
+              
+            }
+          }
+    
+          .nome2{
+            animation: entrada2 2s ease;
+    
+            .jonathan{
+              font-family: 'Alex Brush';
+              font-size: 50px;
+              color: rgb(0, 0, 0);
+          
+          
+            }
+          }
+            
+            .icon{
+              animation: surgir 3s ease;
+              color: rgb(214, 7, 7);
+              margin: 0 4px;
+              text-align: center;
+            }
+        }
+      }
+    }
+  
+    .baixo{
+      background-color: #f7aea2;
+      height: 50%;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .dedic{
+      margin-bottom: 6px;
+      font-family: 'Alex Brush';
+      font-weight:bold;
+      color: rgb(0, 0, 0);
+      font-weight: 1;
+      font-size: 40px;
+      margin-top: 20px;
+    }
+  
+    .you{
+      margin-bottom: 6px;
+      font-family: 'Alex Brush';
+      font-weight: bolder;
+      font-weight: 10;
+      color: rgb(0, 0, 0);
+      font-size: 80px;
+      .s{
+        font-size: 30px;
+        margin: 10px;
+      }
+    }
+  
+  
+  
+  }
+} 
+
+
+
+.confirm{
+  z-index: 100;
+  background-color: #e2aca3d9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 17px;
+  color:#d68c81;
+
+  .btn-fechar{
+
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+
+    .icon{
+      font-size: 2.3rem;
+      
+    }
+    
+  }
+  
+  .convidados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    width: 90%;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    box-shadow: #43404082 15px 15px 15px;
+    .msg{
+      font-size: 1.6rem;
+    }
+
+    .msg2{
+
+      margin-top: 15px;
+      text-align: center;
+
+      font-size: 1.3rem;
+      color:#d68c81;
+    }
+
+    .nomes{
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    
+  }
+  .contact-form{
+
+   .btn-submit{
+     box-shadow: #43404082 15px 15px 15px;
+     background-color: white;
+     border: none;
+     font-weight: bold;
+     color: #d68c81;
+     border-radius: 20px;
+     font-size: 1.2rem;
+     width: 300px;
+     height: 40px;
+     cursor: pointer;
+
+     &:hover{
+       color: white;
+       background-color: #d68c81;;
+     }
+    }
+  }
+}
+
+.btn-listas{
+  background-color: #ffebcd98;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-bottom: 7px;
+  text-align: center;
+
+  &:hover{
+    background-color: #e2aca3 ;
+
+    .icon{
+      color:#ffffff;
+    }
+  }
+
+
+  span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20%;
+  }
+  .icon{
+    color:#e2aca3;
+    font-size: 3rem;
+    margin: 0px 30px 0px 15px;
+
+  }
+
+  .nome{
+    font-size: 1.3rem;
+  }
+}
+
+.listas{
+  background-color: #e2aca3d9;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+
+  .btn-fechar{
+    color: white;
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    border-radius: 100%;
+    cursor: pointer;
+   
+  }
+  .listas-div{
+
+    width: 400px;
+    
+    a{
+      text-decoration: none;
+      text-align: center;
+  
+      .lista{
+        width: 100%;
+        color: #b6847b;
+        border-radius: 7px;
+        height: 40px;
+        background-color: white;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+
+    }
+  }
+  .pix{
+    background-color: white;
+    color: #b6847b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    border-radius: 6px;
+    span{
+      font-size: 1.5rem;
+      margin: 5px 0;
+    }
+
+  }
+
+
+}
+
+.up{
+
+  animation: pracima 3.5s ease;
+}
+
+.down{
+  animation: prabaixo 3.5s ease;
+}
+
+.animainit{
+
+  animation: telainit 5s ease;
+  
+}
