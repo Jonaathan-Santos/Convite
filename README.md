@@ -1,3 +1,30 @@
+# Convite Digital Interativo
+
+[testar] (https://convite-talita-jonathan.netlify.app/?nomes=Harry)
+
+obs:  para alterar o nome do convida basta  alterar o nome  apos "/?nomes="  na Url do navegador
+caso queira colocar mais de um convidado  separe cada nomke com  "-"  ex:(/?nomes=Jose-Maria)
+Vc só pode confirmar presença uma vez por navegador.
+
+##  Descrição
+A aplucação  consistem em um  convite web  feito para meu próprio casamento ,
+o convite  tras alguns beneficios como:
+
++ ecomonomi  na imprees de convites tradicionais
++ enconomia no envio de  covites para  convidados em outros estado
++ facil acesso a localização do eevento no mapa
++ facil a cesso a lista de presentes
++  facilidade na hora de enviar  com o nome dos destinatarios (evitando penetras)
++  conformação de presença  via email
+
+## Tecnologia:
+
++ React.Js
++ SASS
++ EmalJs (api)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -10,6 +37,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
